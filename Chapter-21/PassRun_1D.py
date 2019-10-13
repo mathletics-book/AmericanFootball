@@ -17,10 +17,6 @@ dataset = pd.read_csv("pbp_1618.csv")
 print("Pass-Run Ration on 1st and 10 at our own 25")
 print(dataset["play_type"].value_counts())
 
-
-#epa = [(epv[(epv.Down == 2) & (epv.Ydstogo == 10-dataset['yards_gained'].iloc[i])& (epv.Line == 25+dataset['yards_gained'].iloc[i])]["Value"].reset_index()['Value'][0]-epv[(epv.Down == 1) & (epv.Ydstogo == 10) & (epv.Line == 25)]["Value"].reset_index()['Value'][0]) if dataset['yards_gained'].iloc[i] < 10 else (epv[(epv.Down == 1) & (epv.Ydstogo == min(10,100-(25 + dataset['yards_gained'].iloc[i]))) & (epv.Line == 25 + dataset['yards_gained'].iloc[i])]["Value"].reset_index()['Value'][0]-epv[(epv.Down == 1) & (epv.Ydstogo == 10) & (epv.Line == 25)]["Value"].reset_index()['Value'][0]) for i in range(len(dataset))]
-
-
 pass_epa = dataset[dataset.play_type == "pass"]["epa"]
 run_epa = dataset[dataset.play_type == "run"]["epa"]
 
