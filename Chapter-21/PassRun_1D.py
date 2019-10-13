@@ -11,8 +11,8 @@ import matplotlib
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+## data obtained from nflscrapR - Yurko, Ventura, Horowitz (2019)
 dataset = pd.read_csv("pbp_1618.csv")
-#epv = pd.read_csv("CWS.csv")
 
 print("Pass-Run Ration on 1st and 10 at our own 25")
 print(dataset["play_type"].value_counts())
